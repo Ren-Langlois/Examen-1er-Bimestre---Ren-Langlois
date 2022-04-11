@@ -14,7 +14,11 @@ public class ejercicio1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (codeanimal == "G")
+        if (dias < 3)
+        {
+            Debug.Log("ERROR: No se pueden menos de 3 dias");
+        }
+        else if (codeanimal == "G")
         {
             int comidatotal = Gcomida * dias;
             Debug.Log("Para ese periodo se necesitan " +comidatotal+" gramos de comida" );
@@ -35,10 +39,7 @@ public class ejercicio1 : MonoBehaviour
             int costo = comidatotal / 100 * 80;
             Debug.Log("Costaría " + costo);
         }
-        else if (dias < 3)
-        {
-            Debug.Log("ERROR: No se pueden menos de 3 dias");
-        }
+        
         else
         {
             Debug.Log("ERROR: El codigo es invalido");
